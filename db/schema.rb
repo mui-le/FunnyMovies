@@ -13,7 +13,9 @@
 ActiveRecord::Schema.define(version: 20200509051305) do
 
   create_table "movies", force: :cascade do |t|
-    t.string "url"
+    t.text "url"
+    t.string "title"
+    t.text "description"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,11 +26,10 @@ ActiveRecord::Schema.define(version: 20200509051305) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.string "username"
+    t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end

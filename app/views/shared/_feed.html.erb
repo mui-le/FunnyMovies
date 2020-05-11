@@ -1,0 +1,6 @@
+<% if @movies.any? %>
+  <ol class="movies">
+    <%= render @movies %>
+  </ol>
+  <%= will_paginate @movies %>
+<% end %>

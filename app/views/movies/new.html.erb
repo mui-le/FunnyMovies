@@ -1,0 +1,14 @@
+<% provide(:title, 'Share movie') %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@movie) do |f| %>
+      <%= render 'shared/error_messages', obj: f.object %>
+
+      <%= f.label "Youtube URL" %>
+      <%= f.text_field :url, class: 'form-control' %>
+
+      <%= f.submit "Share", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

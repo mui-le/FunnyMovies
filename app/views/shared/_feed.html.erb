@@ -3,4 +3,6 @@
     <%= render @movies %>
   </ol>
   <%= will_paginate @movies %>
+<% else %>
+  <h3 class="text-info">No movies have been shared!</h3>
 <% end %>
